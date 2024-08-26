@@ -2,7 +2,6 @@
 window.addEventListener("load", function(){
     setTimeout(function(){
         document.getElementById("loader").style.display = "none";
-        document.getElementById(".main-page").style.display = "block";
     }, 2000);
 });
 
