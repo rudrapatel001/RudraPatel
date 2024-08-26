@@ -274,12 +274,11 @@ span {
 
 .about {
   background: var(--second-bg-color);
-  background-image: url("assets/img/zoro.png"); /* Background image */
+  background-image: url("assets/img/zoro.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
-  overflow: hidden;
 }
 .heading {
   color: var(--text-color);
@@ -784,7 +783,6 @@ span {
   background-position: center;
   background-size: cover;
   position: relative;
-  overflow: hidden;
 }
 
 .contact h2 {
