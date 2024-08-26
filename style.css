@@ -183,21 +183,16 @@ span {
   font-weight: 700;
 }
 
-.home-img {
+.home img {
   border-radius: 50%;
 }
 
-.home-img img {
+.home img {
   position: relative;
   width: 32vw;
   border-radius: 50%;
   box-shadow: 0 0 25x var(--main-color);
   cursor: pointer;
-}
-
-.home-img img:hover {
-  transform: scale(1.01);
-  filter: drop-shadow(0 0 25x var(--main-color));
 }
 
 .home-content p {
