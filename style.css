@@ -251,7 +251,7 @@ span {
 @media (max-width: 995px) {
   .home {
     flex-direction: column;
-    margin: -10rem 4rem;
+    margin: 0rem 4rem;
   }
   .home .home-content .h3 {
     font-size: 2.5rem;
