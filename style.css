@@ -300,6 +300,9 @@ span {
   padding: 0.3rem;
   width: 80%;
   margin: 0 auto;
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
 }
 
 /* .about-box:hover {
@@ -414,6 +417,9 @@ span {
   border-radius: 1rem;
   background: var(--second-bg-color);
   transition: 0.3s ease;
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
 }
 
 .skills .container .bar:hover {
@@ -491,6 +497,9 @@ span {
   padding: 2rem;
   width: 80%;
   margin: 0 auto;
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
 }
 
 .project-box:hover {
@@ -697,6 +706,9 @@ span {
   background: var(--main-color);
   position: relative;
   border-radius: 6px;
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
 }
 
 .education .content .tag {
@@ -865,5 +877,16 @@ footer .copyright {
   }
   .about-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
