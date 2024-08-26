@@ -286,6 +286,7 @@ span {
   text-align: center;
   font-size: 7rem;
   padding-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .about-container {
   display: grid;
