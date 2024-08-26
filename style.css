@@ -274,7 +274,10 @@ span {
 
 .about {
   background: var(--second-bg-color);
-  background: url("assets/img/zoro.png") no-repeat center center/cover;
+  background-image: url("assets/img/zoro.png"); /* Background image */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: relative;
   overflow: hidden;
 }
@@ -366,6 +369,9 @@ span {
   }
 }
 @media (max-width: 895px) {
+  .about {
+    background-image: none;
+  }
   .about h2 {
     margin-bottom: 3rem;
   }
@@ -773,7 +779,10 @@ span {
 
 .contact {
   background: var(--second-bg-color);
-  background: url("assets/img/sanji.jpg") no-repeat center center/cover;
+  background-image: url("assets/img/sanji.jpg"); /* Background image */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: relative;
   overflow: hidden;
 }
@@ -871,6 +880,9 @@ footer .copyright {
   }
   .about {
     padding-bottom: 7rem;
+  }
+  .contact {
+    background-image: none;
   }
   .footer {
     padding: 2rem 3%;
