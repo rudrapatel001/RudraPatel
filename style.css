@@ -858,6 +858,27 @@ footer .copyright {
   font-size: 16px;
   color: var(--text-color);
 }
+/* Scroll to Top Button Styling */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 15px;
+  border: 3px solid var(--main-color);
+  outline: none;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+#scrollTopBtn:hover {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
 
 @media (max-width: 1285px) {
   html {
@@ -875,9 +896,6 @@ footer .copyright {
   .about {
     padding-bottom: 7rem;
   }
-  .contact {
-    background-image: none;
-  }
   .footer {
     padding: 2rem 3%;
   }
@@ -889,6 +907,9 @@ footer .copyright {
   }
   .about-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .contact {
+    background-image: none;
   }
 }
 
