@@ -164,6 +164,32 @@ section {
   gap: 8rem;
   background: var(--bg-color);
 }
+/* Initially hide the content */
+.home-content .fade-in {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  transition-delay: var(--delay);
+}
+
+/* After loader, make the content visible */
+.home-content.loaded .fade-in {
+  opacity: 1;
+}
+
+.btn.fade-in,
+.social-icon.fade-in {
+  opacity: 0;
+  transform: translatex(100px); /* Start 100px off the right side */
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+  transition-delay: var(--delay); /* Use custom delay defined in inline style */
+}
+
+/* After loader, make the buttons visible and slide them into place */
+.home-content.loaded .social-icon.fade-in,
+.home-content.loaded .btn.fade-in {
+  opacity: 1;
+  transform: translateX(0); /* Move them back to their original position */
+}
 
 .home .home-content h1 {
   color: var(--text-color);

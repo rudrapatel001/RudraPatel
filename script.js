@@ -5,6 +5,14 @@ window.addEventListener("load", function(){
     }, 2000);
 });
 
+window.addEventListener('load', function () {
+    // Simulate a loader time (e.g., 2 seconds)
+    setTimeout(function() {
+        document.querySelector('.home-content').classList.add('loaded');
+    }, 2000); // 2000ms = 2 seconds
+});
+
+
 //Theme-Selector
 document.addEventListener('DOMContentLoaded', () => {
     const themes = ['default-theme', 'dark-theme'];
