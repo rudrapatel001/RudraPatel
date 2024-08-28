@@ -179,7 +179,7 @@ section {
 .btn.fade-in,
 .social-icon.fade-in {
   opacity: 0;
-  transform: translatex(100px); /* Start 100px off the right side */
+  transform: translatex(50px); /* Start 100px off the right side */
   transition: opacity 2s ease-in-out, transform 2s ease-in-out;
   transition-delay: var(--delay); /* Use custom delay defined in inline style */
 }
