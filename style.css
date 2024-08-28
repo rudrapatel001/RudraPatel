@@ -175,20 +175,6 @@ section {
   opacity: 1;
 }
 
-.btn.fade-in,
-.social-icon.fade-in {
-  opacity: 0;
-  transform: translatex(20px);
-  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
-  transition-delay: var(--delay);
-}
-
-.home-content.loaded .social-icon.fade-in,
-.home-content.loaded .btn.fade-in {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 .home .home-content h1 {
   color: var(--text-color);
   font-size: 6rem;
@@ -217,6 +203,9 @@ span {
   border-radius: 50%;
   box-shadow: 0 0 25x var(--main-color);
   cursor: pointer;
+}
+.home-content {
+  overflow: hidden;
 }
 
 .home-content p {
@@ -267,6 +256,21 @@ span {
   color: var(--bg-color);
   box-shadow: 0 0 25x var(--main-color);
 }
+
+.btn.fade-in,
+.social-icon.fade-in {
+  opacity: 0;
+  transform: translatex(100px);
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+  transition-delay: var(--delay);
+}
+
+.home-content.loaded .social-icon.fade-in,
+.home-content.loaded .btn.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 @media (max-width: 1000px) {
   .home {
     gap: 4rem;
