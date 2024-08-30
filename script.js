@@ -1,38 +1,18 @@
-// Loader
+// Hide the loader after 2 seconds of page load
 window.addEventListener("load", function () {
   setTimeout(function () {
     document.getElementById("loader").style.display = "none";
   }, 2000);
 });
 
+// Add a class to .home-content after 2 seconds of page load to trigger animations or styling
 window.addEventListener("load", function () {
-  // Simulate a loader time (e.g., 2 seconds)
   setTimeout(function () {
     document.querySelector(".home-content").classList.add("loaded");
-  }, 2000); // 2000ms = 2 seconds
+  }, 2000);
 });
 
-//Theme-Selector
-document.addEventListener("DOMContentLoaded", () => {
-  const themes = ["default-theme", "dark-theme"];
-  let currentThemeIndex = 0;
-
-  const themeToggle = document.getElementById("theme-toggle");
-
-  const setTheme = (theme) => {
-    document.body.className = theme;
-  };
-
-  const cycleThemes = () => {
-    currentThemeIndex = (currentThemeIndex + 1) % themes.length;
-    setTheme(themes[currentThemeIndex]);
-  };
-
-  themeToggle.addEventListener("click", cycleThemes);
-
-  setTheme(themes[currentThemeIndex]);
-});
-
+// Initialize the typing effect for text
 const typed = new Typed("#typing-text", {
   strings: ["Data scientist", "Data Analyst"],
   typeSpeed: 100,
@@ -40,27 +20,31 @@ const typed = new Typed("#typing-text", {
   loop: true,
 });
 
-//active navbar
-let sections = document.querySelectorAll("section");
-let navLink = document.querySelectorAll("header nav a");
+// Theme selector functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const themes = ["default-theme", "dark-theme"];
+  let currentThemeIndex = 0;
+  const themeToggle = document.getElementById("theme-toggle");
 
-window.onscroll = () => {
-  sections.forEach((sec) => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute("id");
+  // Function to apply the selected theme to the body
+  const setTheme = (theme) => {
+    document.body.className = theme;
+  };
 
-    if (top >= offset && top < offset + height) {
-      navLink.forEach((links) => {
-        links.classList.remove("active");
-        document
-          .querySelector("header nav a[href*=" + id + "]")
-          .classList.add("active");
-      });
-    }
-  });
-};
+  // Function to cycle through themes
+  const cycleThemes = () => {
+    currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+    setTheme(themes[currentThemeIndex]);
+  };
+
+  // Add click event to the theme toggle button
+  themeToggle.addEventListener("click", cycleThemes);
+
+  // Set the initial theme
+  setTheme(themes[currentThemeIndex]);
+});
+
+// Toggle the navbar visibility when the menu icon is clicked
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 
@@ -69,6 +53,7 @@ menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
 };
 
+// Toggle additional text visibility in the about section
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".toggle-btn");
 
@@ -79,16 +64,17 @@ document.addEventListener("DOMContentLoaded", function () {
       const currentDisplay = moreText.style.display;
 
       if (currentDisplay === "none" || currentDisplay === "") {
-        moreText.style.display = "inline"; // Show the extra text
-        this.textContent = "Show Less"; // Change button text
+        moreText.style.display = "inline";
+        this.textContent = "Show Less";
       } else {
-        moreText.style.display = "none"; // Hide the extra text
-        this.textContent = "Show More"; // Change button text
+        moreText.style.display = "none";
+        this.textContent = "Show More";
       }
     });
   });
 });
 
+// Toggle description visibility in project sections
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".show-description-btn");
 
@@ -109,10 +95,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Redirect to Gmail compose window with pre-filled email details
 function redirectToGmail() {
-  const email = "rudra7042004@example.com"; // Replace with your email
-  const subject = "Your Subject Here"; // Replace with your subject
-  const body = "Hello, I would like to..."; // Replace with your message
+  const email = "rudra7042004@example.com";
+  const subject = "Your Subject Here";
+  const body = "Hello, I would like to...";
   const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
     subject
   )}&body=${encodeURIComponent(body)}`;
@@ -120,11 +107,13 @@ function redirectToGmail() {
   window.open(gmailURL, "_blank");
 }
 
-// When the user scrolls down 20px from the top of the document, show the button
+// Handle scroll events to show/hide the scroll-to-top button and activate navigation links
 window.onscroll = function () {
-  scrollFunction();
+  scrollFunction(); // Manage scroll-to-top button visibility
+  activateNavLink(); // Manage active navigation link highlighting
 };
 
+// Show or hide the scroll-to-top button based on scroll position
 function scrollFunction() {
   const scrollTopBtn = document.getElementById("scrollTopBtn");
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -134,7 +123,30 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+// Highlight the current section link in the navigation bar based on scroll position
+function activateNavLink() {
+  let sections = document.querySelectorAll("section");
+  let navLink = document.querySelectorAll("header nav a");
+
+  let top = window.scrollY;
+
+  sections.forEach((sec) => {
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
+
+    if (top >= offset && top < offset + height) {
+      navLink.forEach((links) => {
+        links.classList.remove("active");
+        document
+          .querySelector("header nav a[href*=" + id + "]")
+          .classList.add("active");
+      });
+    }
+  });
+}
+
+// Scroll to the top of the page
 function scrollToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
