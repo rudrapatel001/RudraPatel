@@ -408,7 +408,7 @@ span {
     font-size: 3rem;
   }
   .home-content h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 /* Base Styles */
@@ -440,7 +440,8 @@ span {
   display: flex;
   gap: 1rem;
   scroll-behavior: smooth;
-  padding: 1rem 1.5rem 2rem;
+  margin: 2rem 0rem 2rem 0rem;
+  padding: 1rem 0rem 1rem 0;
 }
 .skills-slider::-webkit-scrollbar {
   display: none;
@@ -451,6 +452,7 @@ span {
   width: 150px;
   text-align: center;
   padding: 1px;
+  margin-left: 1rem;
   background: #fff;
   border-radius: 1rem;
   transition: transform 0.3s ease;
