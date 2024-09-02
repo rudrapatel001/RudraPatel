@@ -74,6 +74,59 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.querySelectorAll(".skills-slider").forEach((slider) => {
+  slider.addEventListener("wheel", (event) => {
+    event.preventDefault(); // Prevents the default vertical scrolling
+    slider.scrollLeft += event.deltaY; // Scrolls horizontally
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.querySelector(".skills-slider");
+
+  // Handle mouse drag scrolling
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener("mouseleave", () => {
+    isDragging = false;
+  });
+
+  slider.addEventListener("mouseup", () => {
+    isDragging = false;
+  });
+
+  slider.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2; // Scroll speed
+    slider.scrollLeft = scrollLeft - walk;
+  });
+
+  // Handle touch scrolling for mobile
+  let touchStartX;
+  let touchStartScrollLeft;
+
+  slider.addEventListener("touchstart", (e) => {
+    touchStartX = e.touches[0].pageX - slider.offsetLeft;
+    touchStartScrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener("touchmove", (e) => {
+    const touchX = e.touches[0].pageX - slider.offsetLeft;
+    const touchWalk = (touchX - touchStartX) * 2; // Scroll speed
+    slider.scrollLeft = touchStartScrollLeft - touchWalk;
+  });
+});
+
 // Toggle description visibility in project sections
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".show-description-btn");
