@@ -20,7 +20,6 @@ const typed = new Typed("#typing-text", {
   loop: true,
 });
 
-// Theme selector functionality
 document.addEventListener("DOMContentLoaded", () => {
   const themes = ["default-theme", "dark-theme"];
   let currentThemeIndex = 0;
@@ -38,7 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Add click event to the theme toggle button
-  themeToggle.addEventListener("click", cycleThemes);
+  themeToggle.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevents the default anchor behavior (scroll to top)
+    cycleThemes(); // Cycles through the themes
+  });
 
   // Set the initial theme
   setTheme(themes[currentThemeIndex]);
@@ -53,11 +55,11 @@ menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
 };
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const toggleButtons = document.querySelectorAll(".toggle-btn");
 
-  toggleButtons.forEach(button => {
-    button.addEventListener("click", function() {
+  toggleButtons.forEach((button) => {
+    button.addEventListener("click", function () {
       const targetId = this.getAttribute("data-target");
       const target = document.getElementById(targetId);
 
@@ -71,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
-
 
 document.querySelectorAll(".skills-slider").forEach((slider) => {
   slider.addEventListener("wheel", (event) => {

@@ -18,6 +18,8 @@
   --main-color: #7b4bb7;
   --highlight-color: rgba(255, 255, 255, 0.9);
   --nav-top: rgba(255, 255, 255, 0.4);
+  --transition-duration: 0.5s; /* Add this */
+  --transition-timing-function: ease-in-out; /* Add this */
 }
 .dark-theme {
   --bg-color: #000000;
@@ -26,6 +28,30 @@
   --main-color: #7b4bb7;
   --highlight-color: rgba(0, 0, 0, 0.9);
   --nav-top: rgba(0, 0, 0, 0.4);
+  --transition-duration: 0.5s; /* Add this */
+  --transition-timing-function: ease-in-out; /* Add this */
+}
+body,
+.header,
+.navbar a,
+.logo,
+.heading,
+.home,
+.home-content h1,
+.home-content h3,
+.home-content p,
+.btn,
+.skills .container,
+.skills .category-heading,
+.slide,
+.about-box,
+.about-info h4,
+.about-info p {
+  transition: background-color var(--transition-duration)
+      var(--transition-timing-function),
+    color var(--transition-duration) var(--transition-timing-function),
+    border-color var(--transition-duration) var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 html {
@@ -165,8 +191,8 @@ section {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   transition: 0.5s ease;
 }
-.heading:hover{
-  transform:scale(1.03);
+.heading:hover {
+  transform: scale(1.03);
 }
 .home {
   display: flex;
@@ -315,9 +341,7 @@ span {
   position: relative;
 }
 .about-container {
-  
   align-items: center;
-  
 }
 
 .about-box {
@@ -368,7 +392,7 @@ span {
   .about {
     background-image: none;
   }
-  
+
   .about-box {
     width: 100%;
   }
@@ -552,7 +576,7 @@ span {
   font-size: 1.6rem;
   font-weight: 400;
   margin-bottom: 20px;
-  text-align: justify
+  text-align: justify;
 }
 
 .show-description-btn {
