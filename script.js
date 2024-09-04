@@ -53,26 +53,25 @@ menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
 };
 
-// Toggle additional text visibility in the about section
-document.addEventListener("DOMContentLoaded", function () {
-  const buttons = document.querySelectorAll(".toggle-btn");
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleButtons = document.querySelectorAll(".toggle-btn");
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", function () {
+  toggleButtons.forEach(button => {
+    button.addEventListener("click", function() {
       const targetId = this.getAttribute("data-target");
-      const moreText = document.getElementById(targetId);
-      const currentDisplay = moreText.style.display;
+      const target = document.getElementById(targetId);
 
-      if (currentDisplay === "none" || currentDisplay === "") {
-        moreText.style.display = "inline";
+      if (target.style.display === "none" || target.style.display === "") {
+        target.style.display = "inline";
         this.textContent = "Show Less";
       } else {
-        moreText.style.display = "none";
+        target.style.display = "none";
         this.textContent = "Show More";
       }
     });
   });
 });
+
 
 document.querySelectorAll(".skills-slider").forEach((slider) => {
   slider.addEventListener("wheel", (event) => {
