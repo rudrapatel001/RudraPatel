@@ -24,26 +24,42 @@ document.addEventListener("DOMContentLoaded", () => {
   const themes = ["default-theme", "dark-theme"];
   let currentThemeIndex = 0;
   const themeToggle = document.getElementById("theme-toggle");
+  const themeMessage = document.getElementById("theme-message");
 
-  // Function to apply the selected theme to the body
   const setTheme = (theme) => {
     document.body.className = theme;
   };
 
-  // Function to cycle through themes
   const cycleThemes = () => {
     currentThemeIndex = (currentThemeIndex + 1) % themes.length;
     setTheme(themes[currentThemeIndex]);
   };
 
-  // Add click event to the theme toggle button
   themeToggle.addEventListener("click", (event) => {
-    event.preventDefault(); // Prevents the default anchor behavior (scroll to top)
-    cycleThemes(); // Cycles through the themes
+    event.preventDefault();
+    cycleThemes();
   });
 
-  // Set the initial theme
   setTheme(themes[currentThemeIndex]);
+
+  // Function to show the message
+  const showThemeMessage = () => {
+    if (!sessionStorage.getItem("themeMessageShown")) {
+      themeMessage.classList.add("show");
+      sessionStorage.setItem("themeMessageShown", "true");
+
+      setTimeout(() => {
+        themeMessage.classList.remove("show");
+      }, 5000);
+    }
+  };
+
+  // Event listener for scrolling to the bottom of the page
+  window.addEventListener("scroll", () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      showThemeMessage();
+    }
+  });
 });
 
 // Toggle the navbar visibility when the menu icon is clicked
