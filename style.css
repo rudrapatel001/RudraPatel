@@ -360,6 +360,13 @@ span {
     width: 70vw;
     margin-top: 4rem;
   }
+  .theme-message {
+    top: 60px;
+    left: 10px;
+  }
+  .theme-message::after {
+    left: 20px;
+  }
 }
 
 /* about me */
