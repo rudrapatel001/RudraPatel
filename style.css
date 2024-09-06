@@ -813,7 +813,7 @@ span {
 
 .education .content .decs p {
   font-size: 1.3rem;
-  text-align: justify;
+  text-align: left;
   margin-top: 2rem;
   color: var(--text-color);
 }
