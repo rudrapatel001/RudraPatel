@@ -68,7 +68,7 @@
     </section>
 
     <section class="about" id="about">
-      <h2 class="heading">About <span>Me</span></h2>
+      <h2 class="heading">About Me</h2>
       <div class="about-container">
         <div class="about-box">
           <div class="about-info">
@@ -94,102 +94,53 @@
       </div>
     </section>
 
-    <section class="skills" id="skills">
+    <section id="skills">
       <h2 class="heading">Skills</h2>
-      <div class="container">
-        <h2 class="category-heading">Languages</h2>
-        <div class="skills-slider">
-          <div class="slide">
-            <img src="assets\svg\python-svgrepo-com.svg" alt="Python" />
-            <span>Python</span>
-          </div>
-          <div class="slide">
-            <img src="assets\svg\java-svgrepo-com.svg" alt="Java" />
-            <span>Java</span>
-          </div>
-          <div class="slide">
-            <img src="assets\svg\cpp-svgrepo-com.svg" alt="C/C++" />
-            <span>C/C++</span>
-          </div>
-          <div class="slide">
-            <img src="assets\svg\html-5-logo-svgrepo-com.svg" alt="HTML" />
-            <span>HTML</span>
-          </div>
-          <div class="slide">
-            <img src="assets\svg\css-3-svgrepo-com.svg" alt="CSS" />
-            <span>CSS</span>
-          </div>
+      <div class="skills-container">
+        <div class="skills-category">
+          <h3>Languages <i class="fa-solid fa-code"></i></h3>
+          <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>C/C++</li>
+            <li>Html</li>
+            <li>Css</li>
+          </ul>
         </div>
-
-        <h2 class="category-heading">Frameworks</h2>
-        <div class="skills-slider">
-          <div class="slide">
-            <img src="assets\svg\flask-svgrepo-com.svg" alt="React" />
-            <span>Flask</span>
-          </div>
-          <div class="slide">
-            <img src="assets\svg\django-icon-svgrepo-com.svg" alt="Django" />
-            <span>Django</span>
-          </div>
-          <div class="slide">
-            <img src="assets\svg\numpy-svgrepo-com.svg" alt="Numpy" />
-            <span>Numpy</span>
-          </div>
-          <div class="slide">
-            <img src="assets\svg\pandas-svgrepo-com.svg" alt="Pandas" />
-            <span>Pandas</span>
-          </div>
-          <div class="slide">
-            <img src="assets\svg\opencv-svgrepo-com.svg" alt="OpenCV" />
-            <span>OpenCV</span>
-          </div>
+    
+        <div class="skills-category">
+          <h3>Frameworks <i class="fa-solid fa-gear"></i></h3>
+          <ul>
+            <li>Django</li>
+            <li>Flask</li>
+            <li>Numpy</li>
+            <li>Pandas</li>
+            <li>Opencv</li>
+          </ul>
         </div>
-
-        <h2 class="category-heading">Databases</h2>
-        <div class="skills-slider">
-          <div class="slide">
-            <img src="assets\svg\sql-svgrepo-com.svg" alt="SQL" />
-            <span>SQL</span>
-          </div>
-          <div class="slide">
-            <img src="assets\svg\mongo-svgrepo-com.svg" alt="MongoDB" />
-            <span>MongoDB</span>
-          </div>
-          <div class="slide">
-            <img src="assets\svg\mysql-logo-svgrepo-com.svg" alt="MySql" />
-            <span>MySql</span>
-          </div>
+    
+        <div class="skills-category">
+          <h3>Databases <i class="fa-solid fa-database"></i></h3>
+          <ul>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+            <li>PostgreSQL</li>
+          </ul>
         </div>
-
-        <h2 class="category-heading">Tools</h2>
-        <div class="skills-slider">
-          <div class="slide">
-            <img src="assets\svg\git-svgrepo-com.svg" alt="Git" />
-            <span>Git</span>
-          </div>
-          <div class="slide">
-            <img src="assets\svg\github-142-svgrepo-com.svg" alt="GitHub" />
-            <span>GitHub</span>
-          </div>
-          <div class="slide">
-            <img src="assets\svg\jupyter-svgrepo-com.svg" alt="Jupyter" />
-            <span>Jupyter</span>
-          </div>
-          <div class="slide">
-            <img src="assets\svg\Power_BI-Logo.wine.svg" alt="Power BI" />
-            <span>Power BI</span>
-          </div>
-          <div class="slide">
-            <img src="assets\svg\tableau-svgrepo-com.svg" alt="Tableau" />
-            <span>Tableau</span>
-          </div>
-          <div class="slide">
-            <img src="assets\svg\excel-svgrepo-com.svg" alt="Excel" />
-            <span>Excel</span>
-          </div>
+    
+        <div class="skills-category">
+          <h3>Tools <i class="fa-solid fa-screwdriver-wrench"></i></h3>
+          <ul>
+            <li>Git/GitHub</li>
+            <li>Jupyter Notebook</li>
+            <li>Power BI</li>
+            <li>Excel</li>
+            <li>Tableau</li>
+          </ul>
         </div>
       </div>
     </section>
+    
 
     <section class="project" id="project">
       <h2 class="heading">Projects</h2>
@@ -204,12 +155,12 @@
             />
             <h4>Face Recognition With Attendance</h4>
             <p class="desc">
-              Python-based face recognition system with a Tkinter GUI for
+              Python-based face recognition system with a <b>Tkinter GUI</b> for
               registering and recognizing users. The system allows users to
               register by capturing images via webcam or by selecting images
               from local storage. It stores the face data and performs real-time
               face recognition using a webcam, recording recognized faces into a
-              MySQL database.
+             <b>MySQL database</b>.
             </p>
             <button class="show-description-btn">Read Description</button>
             <a
@@ -229,14 +180,32 @@
             <h4>House Price Prediction</h4>
             <p class="desc">
               A comprehensive House Price Prediction model using Kaggle's
-              dataset. The project includes data preprocessing, feature
-              engineering, and model development. For visualization, I developed
+              dataset. The project includes <b>data preprocessing</b>, <b>feature
+                engineering</b>, and <b>model development</b>. For visualization, I developed
               a user-friendly frontend that displays predicted prices and
               insights into the factors affecting house prices.
             </p>
             <button class="show-description-btn">Read Description</button>
             <a
               href="https://github.com/rudrapatel001/House_Price_Prediction"
+              class="proj-btn"
+              >View On GitHub <i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+        <div class="project-box">
+          <div class="project-info">
+            <img
+              src="assets/img/sentiment analysis.jpg"
+              alt="House Price Prediction"
+            />
+            <h4>Sentiment Analysis</h4>
+            <p class="desc">
+              This project analyzes text sentiment and emotions using <b>Python</b>, <b>NLP</b>, and <b>tweet extraction</b>. It preprocesses text, detects emotions via a predefined <b>lexicon</b>, and uses the <b>VADER model</b> for sentiment analysis. Tweets are fetched with <b>GetOldTweets3</b>, and results are visualized with <b>matplotlib</b>. The project utilizes Python, NLTK, GetOldTweets3, and matplotlib for insights into sentiment and emotions in text data.
+            </p>
+            <button class="show-description-btn">Read Description</button>
+            <a
+              href="https://github.com/rudrapatel001/Sentiment-Analysis"
               class="proj-btn"
               >View On GitHub <i class="fab fa-github"></i
             ></a>
@@ -375,7 +344,7 @@
     </section>
 
     <section class="education" id="education">
-      <h2 class="heading">My <span>Education</span></h2>
+      <h2 class="heading">My Education</h2>
 
       <div class="timeline">
         <div class="container right">
@@ -436,7 +405,7 @@
     </section>
 
     <section class="contact" id="contact">
-      <h2 class="heading">Contact <span>Me</span></h2>
+      <h2 class="heading">My Education</h2>
 
       <form action="https://formspree.io/f/mldrrwrr   " method="POST">
         <div class="input-box">
