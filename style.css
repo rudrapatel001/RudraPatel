@@ -113,7 +113,7 @@ body {
 }
 
 .logo {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: var(--main-color);
   font-weight: 800;
   cursor: pointer;
@@ -124,7 +124,7 @@ body {
 }
 
 .navbar a {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--text-color);
   margin-left: 4rem;
   font-weight: 500;
@@ -549,7 +549,8 @@ span {
   border-radius: 1rem;
   cursor: pointer;
   transition: 0.3s ease;
-  border: 1px solid var(--main-color);
+  border: 2px solid var(--text-color);
+  box-shadow: 2px 2px var(--text-color);
   padding: 2rem;
   width: 80%;
   margin: 0 auto;
@@ -558,7 +559,6 @@ span {
 .project-box:hover {
   background: transparent;
   color: var(--text-color);
-  border: 1px solid var(--main-color);
 }
 
 .project-box .project-info {
@@ -761,6 +761,7 @@ span {
   background: var(--main-color);
   position: relative;
   border-radius: 6px;
+  border: 2px solid var(--text-color);
   animation: appear 5s linear;
   animation-timeline: view();
   animation-range: entry 0% cover 20%;
@@ -870,9 +871,9 @@ span {
   margin-top: 1rem;
 }
 .contact form p {
-  font-size: 1.5rem;
-  color: white;
-  margin-top: 1rem;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 1rem;
 }
 
 /* Footer */
