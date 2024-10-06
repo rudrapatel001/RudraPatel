@@ -15,9 +15,9 @@
   --bg-color: #ffffff;
   --second-bg-color: #eeeeee;
   --text-color: #000000;
-  --main-color: #7b4bb7;
+  --main-color: #7a1cac;
   --highlight-color: rgba(255, 255, 255, 0.9);
-  --nav-top: rgba(255, 255, 255, 0.4);
+  --nav-top: rgba(0, 0, 0, 0.4);
   --transition-duration: 0.5s; /* Add this */
   --transition-timing-function: ease-in-out; /* Add this */
 }
@@ -25,9 +25,9 @@
   --bg-color: #000000;
   --second-bg-color: #111111;
   --text-color: #ffffff;
-  --main-color: #7b4bb7;
+  --main-color: #7a1cac;
   --highlight-color: rgba(0, 0, 0, 0.9);
-  --nav-top: rgba(0, 0, 0, 0.4);
+  --nav-top: rgba(255, 255, 255, 0.4);
   --transition-duration: 0.5s; /* Add this */
   --transition-timing-function: ease-in-out; /* Add this */
 }
@@ -103,9 +103,10 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 3rem 9%;
+  padding: 2rem 5%;
   background: var(--highlight-color);
-  filter: drop-shadow(10px);
+  filter: drop-shadow(0px 0px 5px var(--nav-top));
+  /* box-shadow: 0 0 5px var(--text-color); */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,7 +157,7 @@ body {
     border-bottom: 3px solid var(--main-color);
     border-bottom-left-radius: 2rem;
     padding: 1rem 3%;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     border-top: 0.1rem solid var(--nav-top);
     display: none;
   }
@@ -269,7 +270,7 @@ span {
   position: relative;
   width: 32vw;
   border-radius: 50%;
-  box-shadow: 0 0 25x var(--main-color);
+  box-shadow: 0 0 5px var(--text-color);
   cursor: pointer;
 }
 .home-content {
@@ -550,15 +551,9 @@ span {
   cursor: pointer;
   transition: 0.3s ease;
   border: 2px solid var(--text-color);
-  box-shadow: 2px 2px var(--text-color);
   padding: 2rem;
   width: 80%;
   margin: 0 auto;
-}
-
-.project-box:hover {
-  background: transparent;
-  color: var(--text-color);
 }
 
 .project-box .project-info {
@@ -605,6 +600,7 @@ span {
 }
 
 .show-description-btn:hover {
+  border: 2px solid var(--bg-color);
   background: var(--main-color);
   color: var(--bg-color);
 }
@@ -624,6 +620,7 @@ span {
 }
 
 .project-info .proj-btn:hover {
+  border: 2px solid var(--bg-color);
   background: var(--main-color);
   color: var(--bg-color);
 }
@@ -872,7 +869,7 @@ span {
 }
 .contact form p {
   font-size: 2rem;
-  color: var(--main-color);
+  color: white;
   margin: 1rem;
 }
 
