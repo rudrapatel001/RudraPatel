@@ -1,472 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Rudra Patel</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
-    />
-  </head>
-  <body>
-    <div id="loader">
-      <video autoplay muted loop>
-        <source src="assets\img\e.mp4" type="video/mp4" />
-      </video>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Rudra Patel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" />
+</head>
+
+<body>
+  <div id="loader">
+    <video autoplay muted loop>
+      <source src="assets\img\e.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div id="particles-js"></div>
+  <header class="header">
+    <a href="#" title="click me" class="logo" id="theme-toggle">Rudra</a>
+    <div id="theme-message" class="theme-message">
+      <p>Click here to change the theme!</p>
     </div>
 
-    <header class="header">
-      <a href="#" title="click me" class="logo" id="theme-toggle">Rudra</a>
-      <div id="theme-message" class="theme-message">
-        <p>Click here to change the theme!</p>
-      </div>
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
 
-      <i class="fa-solid fa-bars" id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#project">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact Me</a>
+    </nav>
+  </header>
 
-      <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#project">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact Me</a>
-      </nav>
-    </header>
-
-    <section class="home" id="home">
-      <img src="assets/img/prof1.jpg" alt="" />
-      <div class="home-content">
-        <h1 class="fade-in" style="--delay: 0s">
-          Hi, It's <span>Rudra Patel</span>
-        </h1>
-        <h3 class="fade-in" style="--delay: 0.3s">
-          I'm a <span id="typing-text"></span>
-        </h3>
-        <p class="fade-in" style="--delay: 0.5s">
-          This is my official portfolio website that shows all the details and
-          work experience.
-        </p>
-
-        <div class="social-icon fade-in" style="--delay: 0.7s">
-          <a href="https://www.linkedin.com/in/rudra-patel-515441242/"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a href="https://github.com/rudrapatel001"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a href="https://www.instagram.com/rudra_patel_.07/"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-        </div>
-
-        <a href="error.html" class="btn fade-in" style="--delay: 1s"
-          >Download CV</a
-        >
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <h2 class="heading">About Me</h2>
-      <div class="about-container">
-        <div class="about-box">
-          <div class="about-info">
-            <h4>Data Scientist</h4>
-            <p id="about-text1">
-              I am a passionate and dedicated aspiring Data Scientist in the
-              final year of my Bachelor's degree in Computer Engineering. My
-              journey into data science began with a keen interest in uncovering
-              patterns and insights from complex datasets. Over time, I have
-              honed my skills in Python, SQL, and various data visualization
-              tools, allowing me to transform raw data into actionable insights.  
-                I have hands-on experience in building predictive models,
-                conducting exploratory data analysis, and deploying machine
-                learning algorithms to solve real-world problems. My portfolio
-                showcases a range of projects, from analyzing large datasets to
-                developing interactive dashboards. I am committed to continuous
-                learning and am always excited to tackle new challenges in the
-                ever-evolving field of data science.
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <h2 class="heading">Skills</h2>
-      <div class="skills-container">
-        <div class="skills-category">
-          <h3>Languages <i class="fa-solid fa-code"></i></h3>
-          <ul>
-            <li>Python</li>
-            <li>Java</li>
-            <li>C/C++</li>
-            <li>Html</li>
-            <li>Css</li>
-          </ul>
-        </div>
-    
-        <div class="skills-category">
-          <h3>Frameworks <i class="fa-solid fa-gear"></i></h3>
-          <ul>
-            <li>Django</li>
-            <li>Flask</li>
-            <li>Numpy</li>
-            <li>Pandas</li>
-            <li>Opencv</li>
-          </ul>
-        </div>
-    
-        <div class="skills-category">
-          <h3>Databases <i class="fa-solid fa-database"></i></h3>
-          <ul>
-            <li>MySQL</li>
-            <li>MongoDB</li>
-            <li>PostgreSQL</li>
-          </ul>
-        </div>
-    
-        <div class="skills-category">
-          <h3>Tools <i class="fa-solid fa-screwdriver-wrench"></i></h3>
-          <ul>
-            <li>Git/GitHub</li>
-            <li>Jupyter Notebook</li>
-            <li>Power BI</li>
-            <li>Excel</li>
-            <li>Tableau</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    
-
-    <section class="project" id="project">
-      <h2 class="heading">Projects</h2>
-      <h2 class="heading">Data <span>Science</span></h2>
-
-      <div class="project-container">
-        <div class="project-box">
-          <div class="project-info">
-            <img
-              src="assets/img/face.jpg"
-              alt="Face Recognition with Attendance"
-            />
-            <h4>Face Recognition With Attendance</h4>
-            <p class="desc">
-              Python-based face recognition system with a <b>Tkinter GUI</b> for
-              registering and recognizing users. The system allows users to
-              register by capturing images via webcam or by selecting images
-              from local storage. It stores the face data and performs real-time
-              face recognition using a webcam, recording recognized faces into a
-             <b>MySQL database</b>.
-            </p>
-            <button class="show-description-btn">Read Description</button>
-            <a
-              href="https://github.com/rudrapatel001/face_recognotion_system"
-              class="proj-btn"
-              >View On GitHub <i class="fab fa-github"></i
-            ></a>
-          </div>
-        </div>
-
-        <div class="project-box">
-          <div class="project-info">
-            <img
-              src="assets/img/house_price_prediction.png"
-              alt="House Price Prediction"
-            />
-            <h4>House Price Prediction</h4>
-            <p class="desc">
-              A comprehensive House Price Prediction model using Kaggle's
-              dataset. The project includes <b>data preprocessing</b>, <b>feature
-                engineering</b>, and <b>model development</b>. For visualization, I developed
-              a user-friendly frontend that displays predicted prices and
-              insights into the factors affecting house prices.
-            </p>
-            <button class="show-description-btn">Read Description</button>
-            <a
-              href="https://github.com/rudrapatel001/House_Price_Prediction"
-              class="proj-btn"
-              >View On GitHub <i class="fab fa-github"></i
-            ></a>
-          </div>
-        </div>
-        <div class="project-box">
-          <div class="project-info">
-            <img
-              src="assets/img/sentiment analysis.jpg"
-              alt="House Price Prediction"
-            />
-            <h4>Sentiment Analysis</h4>
-            <p class="desc">
-              This project analyzes text sentiment and emotions using <b>Python</b>, <b>NLP</b>, and <b>tweet extraction</b>. It preprocesses text, detects emotions via a predefined <b>lexicon</b>, and uses the <b>VADER model</b> for sentiment analysis. Tweets are fetched with <b>GetOldTweets3</b>, and results are visualized with <b>matplotlib</b>. The project utilizes Python, NLTK, GetOldTweets3, and matplotlib for insights into sentiment and emotions in text data.
-            </p>
-            <button class="show-description-btn">Read Description</button>
-            <a
-              href="https://github.com/rudrapatel001/Sentiment-Analysis"
-              class="proj-btn"
-              >View On GitHub <i class="fab fa-github"></i
-            ></a>
-          </div>
-        </div>
-        <div class="project-box">
-          <div class="project-info">
-            <img
-              src="assets/img/lris-flowers-classfication.jpg"
-              alt="Iris Flower Classification"
-            />
-            <h4>Iris Flower Classification</h4>
-            <p class="desc">
-              A machine learning project that classifies Iris flowers into three
-              species: Iris Setosa, Iris Versicolor, and Iris Virginica. The
-              model was trained using the famous Iris dataset and achieves high
-              accuracy through data preprocessing and model optimization. The
-              project includes visualizations to demonstrate the decision
-              boundaries and feature importance.
-            </p>
-            <button class="show-description-btn">Read Description</button>
-            <a
-              href="https://github.com/rudrapatel001/Iris_Flower_Classifier_Ml_Model"
-              class="proj-btn"
-              >View On GitHub <i class="fab fa-github"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-      <h2 class="heading">Data Analysis</h2>
-      <div class="project-container">
-        <div class="project-box">
-          <div class="project-info">
-            <img src="assets/img/Dashboard.png" alt="Bike Sales Dashboard" />
-            <h4>Bike Sales Dashboard | Excel</h4>
-            <p class="desc">
-              An interactive Bike Sales Dashboard using Excel, based on data
-              from an uncleaned CSV file. The dashboard features charts, pivot
-              tables, and filters to provide clear insights into sales
-              performance and trends.
-            </p>
-            <button class="show-description-btn">Read Description</button>
-            <a
-              href="https://github.com/rudrapatel001/Bike_sales_Dashboard"
-              class="proj-btn"
-              >View On GitHub <i class="fab fa-github"></i
-            ></a>
-          </div>
-        </div>
-
-        <div class="project-box">
-          <div class="project-info">
-            <img src="assets/img/airbnb.png" alt="AirBnB Dashboard" />
-            <h4>AirBnB Dashboard | Tableau</h4>
-            <p class="desc">
-              An interactive and visually compelling dashboard using Tableau to
-              analyze Airbnb data. The dashboard provides valuable insights into
-              various aspects of Airbnb listings, such as property types,
-              pricing trends, occupancy rates, and geographic distribution.
-            </p>
-            <button class="show-description-btn">Read Description</button>
-            <a
-              href="https://public.tableau.com/app/profile/rudra.patel2296/viz/AirBnBDashboard-2016/Dashboard1?publish=yes"
-              class="proj-btn"
-              >View On Tableau</a
-            >
-          </div>
-        </div>
-
-        <div class="project-box">
-          <div class="project-info">
-            <img
-              src="assets/img/Power Bi.png"
-              alt="Data Professional Survey Dashboard"
-            />
-            <h4>Data Professional Survey Dashboard | Power BI</h4>
-            <p class="desc">
-              A comprehensive dashboard in Power BI to analyze survey data from
-              data professionals. The dashboard provides insights into various
-              aspects such as demographics, job roles, skills, and salary
-              trends. Despite starting with uncleaned data, the dashboard
-              effectively visualizes the key findings from the survey.
-            </p>
-            <button class="show-description-btn">Read Description</button>
-            <a
-              href="https://public.tableau.com/app/profile/rudra.patel2296/viz/AirBnBDashboard-2016/Dashboard1?publish=yes"
-              class="proj-btn"
-              >View On GitHub <i class="fab fa-github"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-
-      <h2 class="heading">Web Dev</h2>
-      <div class="project-container">
-        <div class="project-box">
-          <div class="project-info">
-            <img src="assets\img\AFB.png" alt="Anonymous Feedback" />
-            <h4>Anonymous Feedback</h4>
-            <p class="desc">
-              The Anonymous Feedback Platform is a secure web application
-              designed for collecting and sharing anonymous feedback. Users can
-              create profiles, distribute feedback forms, and receive responses
-              while keeping their identities private. The platform is built with
-              <b>Next.js</b>, styled using Tailwind CSS, and leverages MongoDB
-              for database management. TypeScript ensures robust code quality,
-              while NextAuth.js handles secure authentication.
-            </p>
-            <button class="show-description-btn">Read Description</button>
-            <a
-              href="https://github.com/rudrapatel001/anonymous-feedback"
-              class="proj-btn"
-              >View On GitHub <i class="fab fa-github"></i
-            ></a>
-          </div>
-        </div>
-        <div class="project-box">
-          <div class="project-info">
-            <img src="assets\img\RetroToons.png" alt="RetroToons" />
-            <h4>RetroToons</h4>
-            <p class="desc">
-              RetroToons is a nostalgic platform that invites users to revisit their favorite cartoons from childhood while fostering a sense of community among enthusiasts. The website features a vibrant home page where cherished memories come alive, alongside a gallery showcasing beloved classics like Pokémon and SpongeBob SquarePants. Users can explore iconic cartoons from various decades, spanning from the '80s to the 2000s, and participate in a fun quiz to discover which cartoon character they resemble the most. Additionally, the blog section offers insightful articles about legendary shows
-            </p>
-            <button class="show-description-btn">Read Description</button>
-            <a href="https://rudrapatel001.github.io/RetroToons/" class="proj-btn"
-              >View on Web <i class="fa-light fa-spider-web"></i
-            ></a>
-          </div>
-        </div>
-        <div class="project-box">
-          <div class="project-info">
-            <img src="assets/img/otaku.png" alt="Otaku Gallery" />
-            <h4>Otaku Gallery | Wallpaper Web</h4>
-            <p class="desc">
-              Developed a dynamic anime wallpaper website using HTML, CSS, and
-              vanilla JavaScript. This project allows users to browse and
-              download high-quality anime wallpapers. It features an intuitive
-              interface, responsive design, and functionality to preview images
-              in full screen. This project showcases my skills in front-end
-              development and user experience design.
-            </p>
-            <button class="show-description-btn">Read Description</button>
-            <a href="https://otaku-gallery-rp.netlify.app/" class="proj-btn"
-              >View on Web <i class="fa-light fa-spider-web"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="education" id="education">
-      <h2 class="heading">My Education</h2>
-
-      <div class="timeline">
-        <div class="container right">
-          <div class="content">
-            <div class="tag">
-              <h2>University</h2>
-            </div>
-            <div class="decs">
-              <p>
-                I am currently pursuing my Bachelor's degree in Computer
-                Engineering at
-                <b>LDRP Institute of Technology and Research</b> in
-                <b>Gandhinagar, Gujarat.</b>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="container left">
-          <div class="content">
-            <div class="tag">
-              <h2>School | HighSchool</h2>
-            </div>
-            <div class="decs">
-              <p>
-                Completed my schooling upto 10th Std at <b>Uma Vidhyalaya</b> in
-                <b>Himmatnagar,S.K.,Gujarat.</b>
-              </p>
-              <p>
-                Continued my higher education of 11th & 12th Std at
-                <b>N & K Pandya Himmat Highschool-2</b> in
-                <b>Himmatnagar,S.K.,Gujarat.</b>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="container right">
-          <div class="content">
-            <div class="tag">
-              <h2>Internship</h2>
-            </div>
-            <div class="decs">
-              <p>
-                <b>Data Science</b> Intern at <b>Prodigy Infotech</b>-sept 2024
-              </p>
-              <p>
-                My work involves <b>data cleaning</b>,
-                <b>exploratory data analysis</b>, and the development of
-                <b>machine learning models</b>. Utilizing <b>Python</b>,
-                <b>Pandas</b>, <b>Numpy</b> and <b>Scikit-learn</b>, I create
-                <b>visualizations</b> and <b>predictive models</b> that support
-                marketing and strategic initiatives.
-                <a href="assets\Certification\Certificate.pdf" class="toggle-btn">certificate</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <h2 class="heading">Contact Me</h2>
-
-      <form action="https://formspree.io/f/mldrrwrr   " method="POST">
-        <div class="input-box">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-        </div>
-        <textarea
-          id="message"
-          name="message"
-          cols="30"
-          rows="10"
-          placeholder="Your Message"
-          required
-        ></textarea>
-        <button type="submit" class="btn">
-          Submit <i class="fa-solid fa-paper-plane"></i>
-        </button>
-        <p>Or</p>
-        <a href="#" class="btn" onclick="redirectToGmail()"
-          >Mail Me <i class="fa-solid fa-envelope"></i
-        ></a>
-      </form>
-    </section>
-
-    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">
-      ↑
-    </button>
-
-    <footer class="footer">
-      <div class="social">
-        <a href="https://www.linkedin.com/in/rudra-patel-515441242/"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-        <a href="https://github.com/rudrapatel001"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a href="https://www.instagram.com/rudra_patel_.07/"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-      </div>
-      <p class="copyright">
-        Contact no: +919316334332 | Email ID: rudra7042004@gmail.com
-        <br /><br />
-        &copy; Rudra Patel | All Rights Reserved
+  <section class="home" id="home">
+    <img src="assets/img/prof1.jpg" alt="" />
+    <div class="home-content">
+      <h1 class="fade-in" style="--delay: 0s">
+        Hi, It's <span>Rudra Patel</span>
+      </h1>
+      <h3 class="fade-in" style="--delay: 0.3s">
+        I'm a <span id="typing-text"></span>
+      </h3>
+      <p class="fade-in" style="--delay: 0.5s">
+        This is my official portfolio website that shows all the details and
+        work experience.
       </p>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="script.js"></script>
-  </body>
+      <div class="social-icon fade-in" style="--delay: 0.7s">
+        <a href="https://www.linkedin.com/in/rudra-patel-515441242/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/rudrapatel001"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/rudra_patel_.07/"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+
+      <a href="error.html" class="btn fade-in" style="--delay: 1s">Download CV</a>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2 class="heading">About Me</h2>
+    <div class="about-container">
+      <div class="about-box">
+        <div class="about-info">
+          <h4>Data Scientist</h4>
+          <p id="about-text1">
+            I am a passionate and dedicated aspiring Data Scientist in the
+            final year of my Bachelor's degree in Computer Engineering. My
+            journey into data science began with a keen interest in uncovering
+            patterns and insights from complex datasets. Over time, I have
+            honed my skills in Python, SQL, and various data visualization
+            tools, allowing me to transform raw data into actionable insights.
+            I have hands-on experience in building predictive models,
+            conducting exploratory data analysis, and deploying machine
+            learning algorithms to solve real-world problems. My portfolio
+            showcases a range of projects, from analyzing large datasets to
+            developing interactive dashboards. I am committed to continuous
+            learning and am always excited to tackle new challenges in the
+            ever-evolving field of data science.
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="heading">Skills</h2>
+    <div class="skills-container">
+      <div class="skills-category">
+        <h3>Languages <i class="fa-solid fa-code"></i></h3>
+        <ul>
+          <li>Python</li>
+          <li>Java</li>
+          <li>C/C++</li>
+          <li>Html</li>
+          <li>Css</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <h3>Frameworks <i class="fa-solid fa-gear"></i></h3>
+        <ul>
+          <li>Django</li>
+          <li>Flask</li>
+          <li>Numpy</li>
+          <li>Pandas</li>
+          <li>Opencv</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <h3>Databases <i class="fa-solid fa-database"></i></h3>
+        <ul>
+          <li>MySQL</li>
+          <li>MongoDB</li>
+          <li>PostgreSQL</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <h3>Tools <i class="fa-solid fa-screwdriver-wrench"></i></h3>
+        <ul>
+          <li>Git/GitHub</li>
+          <li>Jupyter Notebook</li>
+          <li>Power BI</li>
+          <li>Excel</li>
+          <li>Tableau</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="project" id="project">
+    <h2 class="heading">Projects</h2>
+    <h2 class="heading">Data <span>Science</span></h2>
+
+    <div class="project-container">
+      <div class="project-box">
+        <div class="project-info">
+          <img src="assets/img/face.jpg" alt="Face Recognition with Attendance" />
+          <h4>Face Recognition System</h4>
+          <p class="desc">
+            Python-based face recognition system with a <b>Tkinter GUI</b> for
+            registering and recognizing users. The system allows users to
+            register by capturing images via webcam or by selecting images
+            from local storage. It stores the face data and performs real-time
+            face recognition using a webcam, recording recognized faces into a
+            <b>MySQL database</b>.
+          </p>
+          <button class="show-description-btn">Read Description</button>
+          <a href="https://github.com/rudrapatel001/face_recognotion_system" class="proj-btn">View On GitHub <i
+              class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="project-box">
+        <div class="project-info">
+          <img src="assets\img\hand_gesture.png" alt="House Price Prediction" />
+          <h4>Hand Gesture Recognition</h4>
+          <p class="desc">
+            A real-time hand gesture recognition system built with MediaPipe, OpenCV, and TensorFlow. It detects hand
+            movements using a webcam and classifies gestures using a trained model. Features include real-time tracking,
+            gesture classification, and a Streamlit-based UI for easy interaction. Perfect for hands-free control
+            applications!
+          </p>
+          <button class="show-description-btn">Read Description</button>
+          <a href="https://github.com/rudrapatel001/Hand-Gesture-Recognition-System" class="proj-btn">View On GitHub <i
+              class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="project-box">
+        <div class="project-info">
+          <img src="assets/img/house_price_prediction.png" alt="House Price Prediction" />
+          <h4>House Price Prediction</h4>
+          <p class="desc">
+            A comprehensive House Price Prediction model using Kaggle's
+            dataset. The project includes <b>data preprocessing</b>, <b>feature
+              engineering</b>, and <b>model development</b>. For visualization, I developed
+            a user-friendly frontend that displays predicted prices and
+            insights into the factors affecting house prices.
+          </p>
+          <button class="show-description-btn">Read Description</button>
+          <a href="https://github.com/rudrapatel001/House_Price_Prediction" class="proj-btn">View On GitHub <i
+              class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <div class="project-box">
+        <div class="project-info">
+          <img src="assets/img/sentiment analysis.jpg" alt="House Price Prediction" />
+          <h4>Sentiment Analysis</h4>
+          <p class="desc">
+            This project analyzes text sentiment and emotions using <b>Python</b>, <b>NLP</b>, and <b>tweet
+              extraction</b>. It preprocesses text, detects emotions via a predefined <b>lexicon</b>, and uses the
+            <b>VADER model</b> for sentiment analysis. Tweets are fetched with <b>GetOldTweets3</b>, and results are
+            visualized with <b>matplotlib</b>. The project utilizes Python, NLTK, GetOldTweets3, and matplotlib for
+            insights into sentiment and emotions in text data.
+          </p>
+          <button class="show-description-btn">Read Description</button>
+          <a href="https://github.com/rudrapatel001/Sentiment-Analysis" class="proj-btn">View On GitHub <i
+              class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <div class="project-box">
+        <div class="project-info">
+          <img src="assets/img/lris-flowers-classfication.jpg" alt="Iris Flower Classification" />
+          <h4>Iris Flower Classification</h4>
+          <p class="desc">
+            A machine learning project that classifies Iris flowers into three
+            species: Iris Setosa, Iris Versicolor, and Iris Virginica. The
+            model was trained using the famous Iris dataset and achieves high
+            accuracy through data preprocessing and model optimization. The
+            project includes visualizations to demonstrate the decision
+            boundaries and feature importance.
+          </p>
+          <button class="show-description-btn">Read Description</button>
+          <a href="https://github.com/rudrapatel001/Iris_Flower_Classifier_Ml_Model" class="proj-btn">View On GitHub <i
+              class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <h2 class="heading">Data Analysis</h2>
+    <div class="project-container">
+      <div class="project-box">
+        <div class="project-info">
+          <img src="assets/img/Dashboard.png" alt="Bike Sales Dashboard" />
+          <h4>Bike Sales Dashboard | Excel</h4>
+          <p class="desc">
+            An interactive Bike Sales Dashboard using Excel, based on data
+            from an uncleaned CSV file. The dashboard features charts, pivot
+            tables, and filters to provide clear insights into sales
+            performance and trends.
+          </p>
+          <button class="show-description-btn">Read Description</button>
+          <a href="https://github.com/rudrapatel001/Bike_sales_Dashboard" class="proj-btn">View On GitHub <i
+              class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="project-box">
+        <div class="project-info">
+          <img src="assets/img/airbnb.png" alt="AirBnB Dashboard" />
+          <h4>AirBnB Dashboard | Tableau</h4>
+          <p class="desc">
+            An interactive and visually compelling dashboard using Tableau to
+            analyze Airbnb data. The dashboard provides valuable insights into
+            various aspects of Airbnb listings, such as property types,
+            pricing trends, occupancy rates, and geographic distribution.
+          </p>
+          <button class="show-description-btn">Read Description</button>
+          <a href="https://public.tableau.com/app/profile/rudra.patel2296/viz/AirBnBDashboard-2016/Dashboard1?publish=yes"
+            class="proj-btn">View On Tableau</a>
+        </div>
+      </div>
+
+      <div class="project-box">
+        <div class="project-info">
+          <img src="assets/img/Power Bi.png" alt="Data Professional Survey Dashboard" />
+          <h4>Data Professional Survey Dashboard | Power BI</h4>
+          <p class="desc">
+            A comprehensive dashboard in Power BI to analyze survey data from
+            data professionals. The dashboard provides insights into various
+            aspects such as demographics, job roles, skills, and salary
+            trends. Despite starting with uncleaned data, the dashboard
+            effectively visualizes the key findings from the survey.
+          </p>
+          <button class="show-description-btn">Read Description</button>
+          <a href="https://public.tableau.com/app/profile/rudra.patel2296/viz/AirBnBDashboard-2016/Dashboard1?publish=yes"
+            class="proj-btn">View On GitHub <i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="heading">Web Dev</h2>
+    <div class="project-container">
+      <div class="project-box">
+        <div class="project-info">
+          <img src="assets\img\AFB.png" alt="Anonymous Feedback" />
+          <h4>Anonymous Feedback</h4>
+          <p class="desc">
+            The Anonymous Feedback Platform is a secure web application
+            designed for collecting and sharing anonymous feedback. Users can
+            create profiles, distribute feedback forms, and receive responses
+            while keeping their identities private. The platform is built with
+            <b>Next.js</b>, styled using Tailwind CSS, and leverages MongoDB
+            for database management. TypeScript ensures robust code quality,
+            while NextAuth.js handles secure authentication.
+          </p>
+          <button class="show-description-btn">Read Description</button>
+          <a href="https://github.com/rudrapatel001/anonymous-feedback" class="proj-btn">View On GitHub <i
+              class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <div class="project-box">
+        <div class="project-info">
+          <img src="assets\img\RetroToons.png" alt="RetroToons" />
+          <h4>RetroToons</h4>
+          <p class="desc">
+            RetroToons is a nostalgic platform that invites users to revisit their favorite cartoons from childhood
+            while fostering a sense of community among enthusiasts. The website features a vibrant home page where
+            cherished memories come alive, alongside a gallery showcasing beloved classics like Pokémon and SpongeBob
+            SquarePants. Users can explore iconic cartoons from various decades, spanning from the '80s to the 2000s,
+            and participate in a fun quiz to discover which cartoon character they resemble the most. Additionally, the
+            blog section offers insightful articles about legendary shows
+          </p>
+          <button class="show-description-btn">Read Description</button>
+          <a href="https://rudrapatel001.github.io/RetroToons/" class="proj-btn">View on Web <i
+              class="fa-light fa-spider-web"></i></a>
+        </div>
+      </div>
+      <div class="project-box">
+        <div class="project-info">
+          <img src="assets/img/otaku.png" alt="Otaku Gallery" />
+          <h4>Otaku Gallery | Wallpaper Web</h4>
+          <p class="desc">
+            Developed a dynamic anime wallpaper website using HTML, CSS, and
+            vanilla JavaScript. This project allows users to browse and
+            download high-quality anime wallpapers. It features an intuitive
+            interface, responsive design, and functionality to preview images
+            in full screen. This project showcases my skills in front-end
+            development and user experience design.
+          </p>
+          <button class="show-description-btn">Read Description</button>
+          <a href="https://otaku-gallery-rp.netlify.app/" class="proj-btn">View on Web <i
+              class="fa-light fa-spider-web"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="education" id="education">
+    <h2 class="heading">My Education</h2>
+
+    <div class="timeline">
+      <div class="container right">
+        <div class="content">
+          <div class="tag">
+            <h2>University</h2>
+          </div>
+          <div class="decs">
+            <p>
+              I am currently pursuing my Bachelor's degree in Computer
+              Engineering at
+              <b>LDRP Institute of Technology and Research</b> in
+              <b>Gandhinagar, Gujarat.</b>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <div class="tag">
+            <h2>School | HighSchool</h2>
+          </div>
+          <div class="decs">
+            <p>
+              Completed my schooling upto 10th Std at <b>Uma Vidhyalaya</b> in
+              <b>Himmatnagar,S.K.,Gujarat.</b>
+            </p>
+            <p>
+              Continued my higher education of 11th & 12th Std at
+              <b>N & K Pandya Himmat Highschool-2</b> in
+              <b>Himmatnagar,S.K.,Gujarat.</b>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <div class="tag">
+            <h2>Internship</h2>
+          </div>
+          <div class="decs">
+            <p>
+              <b>Data Science</b> Intern at <b>Prodigy Infotech</b>-sept 2024
+            </p>
+            <p>
+              My work involves <b>data cleaning</b>,
+              <b>exploratory data analysis</b>, and the development of
+              <b>machine learning models</b>. Utilizing <b>Python</b>,
+              <b>Pandas</b>, <b>Numpy</b> and <b>Scikit-learn</b>, I create
+              <b>visualizations</b> and <b>predictive models</b> that support
+              marketing and strategic initiatives.
+              <a href="assets\Certification\Certificate.pdf" class="toggle-btn">certificate</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact Me</h2>
+
+    <form action="https://formspree.io/f/mldrrwrr   " method="POST">
+      <div class="input-box">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+      </div>
+      <textarea id="message" name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">
+        Submit <i class="fa-solid fa-paper-plane"></i>
+      </button>
+      <p>Or</p>
+      <a href="#" class="btn" onclick="redirectToGmail()">Mail Me <i class="fa-solid fa-envelope"></i></a>
+    </form>
+  </section>
+
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">
+    ↑
+  </button>
+
+  <footer class="footer">
+    <div class="social">
+      <a href="https://www.linkedin.com/in/rudra-patel-515441242/"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/rudrapatel001"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.instagram.com/rudra_patel_.07/"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <p class="copyright">
+      Contact no: +919316334332 | Email ID: rudra7042004@gmail.com
+      <br /><br />
+      &copy; Rudra Patel | All Rights Reserved
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+</body>
+
 </html>

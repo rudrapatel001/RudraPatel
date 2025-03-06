@@ -8,7 +8,7 @@ window.addEventListener("load", function () {
 
 // Initialize the typing effect for text
 const typed = new Typed("#typing-text", {
-  strings: ["Data scientist", "Data Analyst"],
+  strings: ["Python Dev", "Data scientist", "Data Analyst"],
   typeSpeed: 100,
   backSpeed: 100,
   loop: true,
