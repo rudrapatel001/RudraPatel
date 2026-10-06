@@ -13,7 +13,7 @@ import tauriIcon from '../../assets/svg/tauri.svg';
 import flaskIcon from '../../assets/svg/flask.svg';
 import streamlitIcon from '../../assets/svg/streamlit.svg';
 import pandasIcon from '../../assets/svg/pandas.svg';
-import plotlyIcon from '../../assets/svg/Ploty.svg';
+import plotlyIcon from '../../assets/svg/ploty.svg';
 import mongoIcon from '../../assets/svg/mongodb.svg';
 import mysqlIcon from '../../assets/svg/mysql.svg';
 import postgresIcon from '../../assets/svg/postgresql.svg';
