@@ -7,7 +7,7 @@ import Footer from './components/Footer.tsx';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/RudraPatel/">
       <div className="app-container">
         <Navbar />
         <main>
