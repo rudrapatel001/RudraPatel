@@ -33,7 +33,6 @@ export default function Projects() {
       imageUrl: expenseImage, 
       category: "Full Stack",
       githubLink: "https://github.com/rudrapatel001/VaultTrack---Expense-Tracker-",
-      demoLink: "https://example.com"
     },
     {
       id: 2,
@@ -98,7 +97,7 @@ export default function Projects() {
       description: "This project analyzes text sentiment and emotions using Python, NLP, and tweet extraction. It preprocesses text, detects emotions via a predefined lexicon, and uses the VADER model for sentiment analysis. Tweets are fetched with GetOldTweets3, and results are visualized with matplotlib. The project utilizes Python, NLTK, GetOldTweets3, and matplotlib for insights into sentiment and emotions in text data.",
       imageUrl: sentimentImage, 
       category: "Data Science",
-      demoLink: "https://jayko.vercel.app/"
+      githubLink: "https://github.com/rudrapatel001/Sentiment-Analysis"
     }
   ];
 

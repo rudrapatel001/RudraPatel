@@ -77,6 +77,53 @@ div:has(> .projects-grid) > h2 {
 }
 
 /* =========================================
+   BUTTON STYLES (NEW)
+========================================= */
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--bg-main);
+  border: 2px solid var(--accent);
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-main);
+  border: 2px solid var(--text-main);
+}
+
+.btn-secondary:hover {
+  background-color: var(--text-main);
+  color: var(--bg-main);
+}
+
+/* =========================================
    NAVBAR
 ========================================= */
 nav {
@@ -150,54 +197,10 @@ nav h2 {
 }
 
 @media (max-width: 768px) {
-  /* Push page content down to account for the taller, stacked navbar */
   body {
     padding-top: 140px;
   }
 
-  /* Make the navbar itself more compact */
-  nav {
-    padding: 0.5rem 5%;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-
-  nav h2 {
-    font-size: 1.4rem;
-  }
-
-  .nav-links {
-    position: static;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    background-color: transparent;
-    padding: 0 0 0.4rem 0;
-    gap: 0.8rem;
-    border-bottom: none;
-    box-shadow: none;
-    display: flex;
-  }
-
-  .nav-links li a {
-    font-size: 0.9rem;
-  }
-
-  .nav-resume-btn {
-    width: auto;
-    justify-content: center;
-    padding: 0.2rem 0.6rem;
-    font-size: 0.9rem !important;
-  }
-}
-@media (max-width: 768px) {
-  /* Push page content down to account for the taller, stacked navbar */
-  body {
-    padding-top: 140px;
-  }
-
-  /* Make the navbar itself more compact */
   nav {
     padding: 0.5rem 5%;
     flex-direction: column;
