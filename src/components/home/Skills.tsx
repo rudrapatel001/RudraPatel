@@ -1,4 +1,7 @@
 // Skills.tsx
+import type { IconType } from 'react-icons';
+import { FaAws } from 'react-icons/fa';
+import { SiTypescript, SiTailwindcss } from 'react-icons/si';
 
 import goIcon from '../../assets/svg/go.svg';
 import rustIcon from '../../assets/svg/rust.svg';
@@ -22,18 +25,34 @@ import trelloIcon from '../../assets/svg/trello.svg';
 import postmanIcon from '../../assets/svg/postman.svg';
 import dockerIcon from '../../assets/svg/docker.svg';
 
+// Skills with an SVG file use `icon`; skills using react-icons use `Icon`.
+// If neither is set, a short text badge (`fallback`) is shown.
+
+interface Skill {
+  name: string;
+  icon?: string;     // imported SVG file
+  Icon?: IconType;   // react-icons component
+  fallback?: string; // short text shown when there is no icon
+}
+
+interface SkillCategory {
+  title: string;
+  skills: Skill[];
+}
+
 export default function Skills() {
-  const skillCategories = [
+  const skillCategories: SkillCategory[] = [
     {
       title: "Languages",
       skills: [
-        { name: "Go", icon: goIcon }, 
+        { name: "Go", icon: goIcon },
         { name: "Rust", icon: rustIcon },
-        { name: "Python", icon: pythonIcon },
+        { name: "TypeScript", Icon: SiTypescript },
         { name: "JavaScript", icon: jsIcon },
+        { name: "Python", icon: pythonIcon },
+        { name: "SQL", icon: sqlIcon },
         { name: "HTML", icon: htmlIcon },
-        { name: "CSS", icon: cssIcon },
-        { name: "SQL", icon: sqlIcon }
+        { name: "CSS", icon: cssIcon }
       ]
     },
     {
@@ -41,21 +60,24 @@ export default function Skills() {
       skills: [
         { name: "React.JS", icon: reactIcon },
         { name: "Tauri", icon: tauriIcon },
+        { name: "Tailwind CSS", Icon: SiTailwindcss },
+        { name: "Plotly", icon: plotlyIcon },
         { name: "Django", icon: djangoIcon },
         { name: "Flask", icon: flaskIcon },
         { name: "Streamlit", icon: streamlitIcon },
-        { name: "Pandas", icon: pandasIcon },
-        { name: "Plotly", icon: plotlyIcon }
+        { name: "Pandas", icon: pandasIcon }
       ]
     },
     {
-      title: "Databases & Tools",
+      title: "Databases, Cloud & Tools",
       skills: [
         { name: "PostgreSQL", icon: postgresIcon },
+        { name: "TimescaleDB", fallback: "TS" },
         { name: "MySQL", icon: mysqlIcon },
         { name: "MongoDB", icon: mongoIcon },
-        { name: "Git/GitHub", icon: gitIcon },
+        { name: "AWS (S3, SNS)", Icon: FaAws },
         { name: "Docker", icon: dockerIcon },
+        { name: "Git/GitHub", icon: gitIcon },
         { name: "Postman", icon: postmanIcon },
         { name: "Trello", icon: trelloIcon }
       ]
@@ -63,20 +85,24 @@ export default function Skills() {
   ];
 
   return (
-    <section className="glass-section">
+    <section className="glass-section reveal">
       <h2>My Skills</h2>
       <div className="skills-layout">
-        {skillCategories.map((category, idx) => (
-          <div key={idx} className="skill-category">
+        {skillCategories.map((category) => (
+          <div key={category.title} className="skill-category">
             <h3 className="category-title">{category.title}</h3>
             <div className="skill-badges">
-              {category.skills.map((skill, sIdx) => (
-                <div key={sIdx} className="skill-badge">
-                  <img 
-                    src={skill.icon} 
-                    alt={'icon'} 
-                    className="skill-icon-img" 
-                  />
+              {category.skills.map((skill) => (
+                <div key={skill.name} className="skill-badge">
+                  {skill.Icon ? (
+                    <skill.Icon className="skill-icon-img" aria-hidden="true" />
+                  ) : skill.icon ? (
+                    <img src={skill.icon} alt="" className="skill-icon-img" />
+                  ) : (
+                    <span className="skill-icon-fallback" aria-hidden="true">
+                      {skill.fallback}
+                    </span>
+                  )}
                   {skill.name}
                 </div>
               ))}

@@ -4,10 +4,14 @@ import Home from './pages/Home.tsx';
 import Projects from './pages/Projects.tsx';
 import Journey from './pages/Journey.tsx';
 import Footer from './components/Footer.tsx';
+import ScrollToTop from './components/ScrollToTop.tsx';
+import RevealObserver from './components/RevealObserver.tsx';
 
 function App() {
   return (
     <Router basename="/RudraPatel/">
+      <ScrollToTop />
+      <RevealObserver />
       <div className="app-container">
         <Navbar />
         <main>
