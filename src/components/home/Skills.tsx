@@ -1,4 +1,5 @@
 // Skills.tsx
+import type { CSSProperties } from 'react';
 import type { IconType } from 'react-icons';
 import { FaAws } from 'react-icons/fa';
 import { SiTypescript, SiTailwindcss } from 'react-icons/si';
@@ -92,8 +93,12 @@ export default function Skills() {
           <div key={category.title} className="skill-category">
             <h3 className="category-title">{category.title}</h3>
             <div className="skill-badges">
-              {category.skills.map((skill) => (
-                <div key={skill.name} className="skill-badge">
+              {category.skills.map((skill, sIdx) => (
+                <div
+                  key={skill.name}
+                  className="skill-badge"
+                  style={{ '--i': sIdx } as CSSProperties}
+                >
                   {skill.Icon ? (
                     <skill.Icon className="skill-icon-img" aria-hidden="true" />
                   ) : skill.icon ? (

@@ -15,7 +15,7 @@ export default function Hero() {
 
           <h1>Hi, I'm <span>Rudra Patel</span></h1>
           <h2>Full-Stack Developer</h2>
-          <p className="hero-stack">Rust · Go · React · Tauri · Data Science</p>
+          <p className="hero-stack">ReactJS · TypeScript · Node.js · Go · Rust · PostgreSQL · Docker</p>
           <p className="hero-desc">
             Building scalable cloud backends and modern frontends with a passion for data.
           </p>

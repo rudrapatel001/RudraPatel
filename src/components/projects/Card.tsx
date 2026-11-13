@@ -1,16 +1,18 @@
 // Card.tsx
 import { useState } from 'react';
+import type { CSSProperties } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 
 interface ProjectCardProps {
   title: string;
   description: string;
-  imageUrl?: string;
+  imageUrl: string;
   category?: string;
   tech?: string[];
   githubLink?: string;
   demoLink?: string;
+  index?: number; // used to stagger the entry animation
 }
 
 const WORD_LIMIT = 25;
@@ -23,6 +25,7 @@ export default function ProjectCard({
   tech = [],
   githubLink,
   demoLink,
+  index = 0,
 }: ProjectCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -35,7 +38,10 @@ export default function ProjectCard({
       : description;
 
   return (
-    <article className={`project-card ${isExpanded ? 'expanded' : ''}`}>
+    <article
+      className={`project-card ${isExpanded ? 'expanded' : ''}`}
+      style={{ '--i': index } as CSSProperties}
+    >
       <div className="card-media">
         <img src={imageUrl} alt={title} loading="lazy" />
       </div>

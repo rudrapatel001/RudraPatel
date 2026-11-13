@@ -14,7 +14,7 @@ interface Project {
   id: number;
   title: string;
   description: string;
-  imageUrl?: string;
+  imageUrl: string;
   category: string;
   tech: string[];
   githubLink?: string;
@@ -43,14 +43,6 @@ export default function Projects() {
       category: "Full Stack",
       tech: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "NextAuth.js"],
       githubLink: "https://github.com/rudrapatel001/anonymous-feedback",
-    },
-    {
-      id: 10,
-      title: "TaskMaster",
-      description: "TaskMaster is a work-in-progress, full-stack project management app built with React, TypeScript, Go, and PostgreSQL. Its authentication system uses bcrypt (cost 12), short-lived HS256 JWT access tokens, and 256-bit refresh tokens stored only as SHA-256 hashes. Refresh tokens rotate on use, with reuse detection to revoke a user’s sessions; the HttpOnly, SameSite=Strict cookie also uses Secure in production. Workspace access is enforced through membership-based RBAC, with permissions checked server-side and project data scoped to its workspace. The API adds per-client rate limits, strict JSON decoding, input validation, request IDs, structured logging, and panic recovery. PostgreSQL migrations and relational constraints support the data model, while the Go backend separates HTTP handlers, services, and repositories.",
-      category: "Full Stack",
-      tech: ["React", "TypeScript", "Go", "PostgreSQL", "chi", "pgx", "JWT", "bcrypt", "Tailwind CSS"],
-      githubLink: "https://github.com/rudrapatel001/TaskMaster",
     },
     {
       id: 1,
@@ -148,10 +140,11 @@ export default function Projects() {
         ))}
       </div>
 
-      <div className="projects-grid">
-        {filteredProjects.map((proj) => (
+      <div className="projects-grid" key={activeFilter}>
+        {filteredProjects.map((proj, index) => (
           <ProjectCard
             key={proj.id}
+            index={index}
             title={proj.title}
             description={proj.description}
             imageUrl={proj.imageUrl}

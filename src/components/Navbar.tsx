@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Download, Home, FolderKanban, Route, Sun, Moon } from 'lucide-react';
-import resumePdf from '../assets/img/RudraPatel.pdf';
+import resumePdf from '../assets/Resume/RudraPatel.pdf';
 
 type Theme = 'light' | 'dark';
 
@@ -91,7 +91,9 @@ export default function Navbar() {
             aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
             title={theme === 'light' ? 'Dark mode' : 'Light mode'}
           >
-            {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+            <span key={theme} className="theme-icon">
+              {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+            </span>
           </button>
         </li>
       </ul>
